@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Калькулятор трапеции</title>
+<style>
+  .input-error {
+    border-color: red;
+	background-color: red;
+  }
+  .input-error-submit {
+    border: 2px solid black;
+  }
+  .input-error-border {
+  border: 2px solid red;
+}
+  .input-norm-border {
+  border: 2px solid black;
+}
+</style>
+</head>
+<body>
+  <h1>Калькулятор равнобедренной трапеции</h1>
+  <form id="trapezoidCalculator">
+    <label for="inputType">Выберите тип входных данных:</label>
+    <select id="inputType" name="inputType">
+      <option value="sides">Основания и боковая сторона</option>
+      <option value="angle">Основания и угол</option>
+    </select>
+    <button type="button" id = "showButton" onclick="showInputFields()">Показать</button>
+   
+    <!-- Место для картинки с геометрической фигурой -->
+    <img id="trapezoidImage" width = 500px>
+    
+    <!-- Поля для ввода входных данных -->
+    <div id="inputFields">
+      <!-- Поля будут добавлены динамически -->
+    </div>
+    
+    <!-- Группа переключателей для выбора вычисляемых характеристик -->
+    <fieldset>
+      <legend>Выберите характеристики для вычисления:</legend>
+      <div id="checkboxes">
+      <!-- Поля будут добавлены динамически -->
+    </div>
+    </fieldset>
+    
+    <button type="button" onclick="calculate()" id="calculateButton">Вычислить</button>
+    <button type="reset">Очистить</button>
+
+  </form>
+  
+  <!-- Место для вывода результатов расчетов -->
+  <div id="results">
+    <!-- Результаты будут добавлены динамически -->
+  </div>
+  
+  <script src="script.js">
+    // JavaScript код для обработки ввода, вычислений и отображения результатов
+  </script>
+</body>
+</html>
